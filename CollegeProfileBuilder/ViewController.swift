@@ -44,9 +44,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Add City", message: nil, preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Add College", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler { (textField) in
-            textField.placeholder = "Add City Here"
+            textField.placeholder = "Add College Here"
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         alert.addAction(cancelAction)

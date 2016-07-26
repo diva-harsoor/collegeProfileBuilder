@@ -133,6 +133,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="5eK-0i-jRU"/>
                                     <constraint firstAttribute="height" constant="150" id="RnM-AU-XS3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Vvp-zo-JaM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="e3c-gC-E15"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OTO-Zx-WSv">
@@ -171,15 +173,22 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYx-uF-wGR">
                                 <rect key="frame" x="273" y="410" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="onCameraButtonTapped:" destination="wys-70-j4X" eventType="touchUpInside" id="V5a-Fw-wHB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-ZL-bo6">
                                 <rect key="frame" x="276" y="229" width="48" height="30"/>
                                 <state key="normal" title="Library"/>
+                                <connections>
+                                    <action selector="onTappedLibraryButton:" destination="wys-70-j4X" eventType="touchUpInside" id="jRw-Ej-CAZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Bys-Yr-hEY" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="2ZK-LP-Bcd"/>
+                            <constraint firstItem="13O-wU-lmK" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="7XJ-uS-cmQ"/>
                             <constraint firstItem="oAs-yL-OOZ" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="ALT-hC-Ai1"/>
                             <constraint firstItem="dlS-nC-tXK" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="SkR-q8-RE1"/>
                             <constraint firstItem="pEs-ZL-bo6" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="VJF-Ev-jEg"/>

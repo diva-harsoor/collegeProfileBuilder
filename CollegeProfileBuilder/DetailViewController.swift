@@ -8,13 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var collegeTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var enrollmentTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var websiteTextField: UITextField!
+    
+    var imagePicker = UIImagePickerController()
     
     var college : College!
     
@@ -25,6 +27,7 @@ class DetailViewController: UIViewController {
         enrollmentTextField.text = String(college.enrollment)
         websiteTextField.text = String(college.website)
         imageView.image = college.image
+        imagePicker.delegate = self
     }
     
     @IBAction func onTappedSaveButton(sender: UIButton) {
@@ -37,5 +40,24 @@ class DetailViewController: UIViewController {
     @IBAction func onTappedGoButton(sender: UIButton) {
         let url = NSURL(string: websiteTextField.text!)!
         UIApplication.sharedApplication().openURL(url)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true) {
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageView.image = selectedImage
+        }
+    }
+    
+    @IBAction func onTappedLibraryButton(sender: UIButton) {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func onCameraButtonTapped(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
 }
