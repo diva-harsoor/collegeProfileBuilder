@@ -54,7 +54,13 @@
                             <constraint firstItem="Gxt-D1-HtE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="M4n-M2-Q8Q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ecg-8B-jpQ"/>
+                    <navigationItem key="navigationItem" id="ecg-8B-jpQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5fH-sG-kQJ">
+                            <connections>
+                                <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="kLI-h4-WP6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Gxt-D1-HtE" id="EeA-Xf-Oy7"/>
                     </connections>
