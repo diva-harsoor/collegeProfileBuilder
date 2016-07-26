@@ -17,6 +17,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
+        colleges.append(College(name: "University of Salamanca", location: "Spain", enrollment: 32000, image: UIImage(named: "Salamanca")!))
+        colleges.append(College(name: "Al-Azhar University", location: "Egypt", enrollment: 45000, image: UIImage(named: "Al-Azhar")!))
+        colleges.append(College(name: "University of Padua", location: "Italy", enrollment: 63000, image: UIImage(named: "Padua")!))
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
