@@ -38,6 +38,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wys-70-j4X" kind="show" id="GCx-s9-pfh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
