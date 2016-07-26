@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAs-yL-OOZ">
-                                <rect key="frame" x="225" y="102" width="150" height="30"/>
+                                <rect key="frame" x="225" y="77" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="crl-5D-lgW"/>
                                     <constraint firstAttribute="height" constant="30" id="yl2-Cx-fbv"/>
@@ -100,7 +100,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-Yr-hEY">
-                                <rect key="frame" x="225" y="140" width="150" height="30"/>
+                                <rect key="frame" x="225" y="115" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ltt-mO-tin"/>
                                     <constraint firstAttribute="width" constant="150" id="ne9-pC-jAA"/>
@@ -109,7 +109,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-NZ-Bx2">
-                                <rect key="frame" x="225" y="178" width="150" height="30"/>
+                                <rect key="frame" x="225" y="153" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="TMm-JK-HhV"/>
                                     <constraint firstAttribute="height" constant="30" id="cBZ-Yr-qcg"/>
@@ -118,7 +118,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13O-wU-lmK">
-                                <rect key="frame" x="277" y="367" width="46" height="30"/>
+                                <rect key="frame" x="277" y="438" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="wXR-dZ-PS6"/>
                                     <constraint firstAttribute="height" constant="30" id="x9Q-mA-O1U"/>
@@ -129,19 +129,62 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlS-nC-tXK">
-                                <rect key="frame" x="175" y="216" width="250" height="150"/>
+                                <rect key="frame" x="175" y="258" width="250" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="5eK-0i-jRU"/>
                                     <constraint firstAttribute="height" constant="150" id="RnM-AU-XS3"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OTO-Zx-WSv">
+                                <rect key="frame" x="210" y="191" width="180" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oxv-XU-I1P">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krY-o1-jmT">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="kRJ-oi-Yi6"/>
+                                                    <constraint firstAttribute="height" constant="30" id="sN1-hD-Zhe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onTappedWebsiteURLTextFieldText:" destination="wys-70-j4X" eventType="touchUpInside" id="YLY-yp-fVM"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-Qv-h4K">
+                                                <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="FoF-JD-qKy"/>
+                                                    <constraint firstAttribute="height" constant="30" id="GfI-wM-Vl4"/>
+                                                </constraints>
+                                                <state key="normal" title="Go"/>
+                                                <connections>
+                                                    <action selector="onTappedGoButton:" destination="wys-70-j4X" eventType="touchUpInside" id="Beh-5c-95j"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYx-uF-wGR">
+                                <rect key="frame" x="273" y="410" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-ZL-bo6">
+                                <rect key="frame" x="276" y="229" width="48" height="30"/>
+                                <state key="normal" title="Library"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Bys-Yr-hEY" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="2ZK-LP-Bcd"/>
-                            <constraint firstItem="13O-wU-lmK" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="5oF-vk-0JJ"/>
                             <constraint firstItem="oAs-yL-OOZ" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="ALT-hC-Ai1"/>
                             <constraint firstItem="dlS-nC-tXK" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="SkR-q8-RE1"/>
+                            <constraint firstItem="pEs-ZL-bo6" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="VJF-Ev-jEg"/>
+                            <constraint firstItem="OTO-Zx-WSv" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="j2x-Rq-twq"/>
+                            <constraint firstItem="TYx-uF-wGR" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="tAt-7c-xGi"/>
                             <constraint firstItem="KD7-NZ-Bx2" firstAttribute="centerX" secondItem="LkS-ZI-fLg" secondAttribute="centerX" id="tWV-HK-LfB"/>
                         </constraints>
                     </view>
@@ -150,6 +193,7 @@
                         <outlet property="enrollmentTextField" destination="KD7-NZ-Bx2" id="2bx-5O-BlM"/>
                         <outlet property="imageView" destination="dlS-nC-tXK" id="NPa-nU-fw9"/>
                         <outlet property="locationTextField" destination="Bys-Yr-hEY" id="bXT-vQ-iOK"/>
+                        <outlet property="websiteTextField" destination="krY-o1-jmT" id="baI-Ms-55L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoE-kh-G09" userLabel="First Responder" sceneMemberID="firstResponder"/>
