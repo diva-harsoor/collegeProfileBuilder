@@ -35,6 +35,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         college.location = locationTextField.text!
         college.enrollment = Int(enrollmentTextField.text!)!
         college.website = websiteTextField.text!
+        college.image = imageView.image!
     }
     
     @IBAction func onTappedGoButton(sender: UIButton) {
@@ -58,6 +59,12 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
             presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! MapViewController
+        if college.name != "" {
+            dvc.data = college.name
         }
     }
 }
